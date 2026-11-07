@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plants vs. Zombies — Garden Warfare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="game-shell">
+  <header class="topbar">
+    <div class="brand"><span class="brand-leaf">✿</span><div><strong>PLANTS <i>vs.</i> ZOMBIES</strong><small>BACKYARD DEFENSE</small></div></div>
+    <div class="level-label">DAY <b>1-1</b></div>
+    <div class="top-actions"><button id="pauseBtn" title="Pause">Ⅱ</button><button id="soundBtn" title="Sound">♫</button></div>
+  </header>
+  <section class="seedbank">
+    <div class="sun-counter"><img src="assets/sun.svg"><strong id="sunCount">150</strong></div>
+    <div class="seed-cards" id="seedCards"></div>
+    <div class="bank-hint">SELECT A PLANT</div>
+  </section>
+  <main class="yard-wrap">
+    <canvas id="game" width="960" height="480" aria-label="Plants vs Zombies lawn"></canvas>
+    <div class="wave-ui"><span id="waveText">ZOMBIES APPROACHING</span><div class="wave-track"><div id="waveProgress"></div></div></div>
+    <div class="toast" id="toast"></div>
+    <div class="overlay" id="overlay">
+      <div class="intro-card">
+        <div class="intro-mark">🌻</div><p class="eyebrow">YOUR BACKYARD IS UNDER ATTACK</p>
+        <h1>Plants vs. Zombies</h1><p class="intro-copy">Build your defenses, collect sunlight, and stop the incoming zombie horde.</p>
+        <div class="intro-stats"><span>☀ 150 starting sun</span><span>▦ 5 lanes</span><span>🧟 1st wave</span></div>
+        <button id="startBtn" class="primary-btn">LET'S PLAY <span>→</span></button>
+        <small>Choose a seed packet, then click an empty lawn tile to plant.</small>
+      </div>
+    </div>
+    <div class="result-overlay hidden" id="resultOverlay"><div class="result-card"><h2 id="resultTitle">The zombies ate your brains!</h2><p id="resultText"></p><button id="restartBtn" class="primary-btn">PLAY AGAIN →</button></div></div>
+  </main>
+  <footer><span>GARDEN DEFENSE SYSTEM</span><span>TIP: SUNFLOWERS PRODUCE SUN · PEASHOOTERS ATTACK</span><span>HTML / CSS / JS EDITION</span></footer>
+</div>
+<script src="game.js"></script>
+</body></html>
